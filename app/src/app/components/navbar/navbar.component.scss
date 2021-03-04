@@ -1,0 +1,76 @@
+.nav-bar-outer {
+    width: 100vw;
+    background-color: #0d1b2a;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 999;
+    .nav-bar-inner {
+      padding: 10px 25px;
+      height: 100%;
+      .brand-link {
+        color: #fff;
+        float: left;
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        padding-bottom: 20px;
+        span {
+          color: #82ffc6;
+        }
+        .dash-icon{
+            padding-left: 25px;
+            width: 100px;
+            img {
+                width: 40%;
+                margin-top: 5px;
+              }
+        }
+        .dash-title{
+            font-size: 30px;
+            display: block;
+            padding-left: 10px;
+            align-self: center;
+        }
+
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav-bar-outer {
+      .nav-bar-inner {
+        .buttons {
+          margin-top: 150px;
+          display: none;
+          .button {
+            display: block;
+            float: none;
+            margin-left: 0;
+            margin: 0 auto;
+            width: fit-content;
+            font-size: 32px;
+            line-height: 32px;
+            padding: 15px 25px;
+          }
+        }
+      }
+    }
+  }
+  
+  @keyframes gloss {
+    //Only takes effect at the last 10% to fake a delay between iterations
+    0% {
+      transform: translateX(-100%);
+    }
+    10%{
+      transform: translateX(100%);
+    }
+    20%{
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }

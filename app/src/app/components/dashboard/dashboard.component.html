@@ -1,0 +1,26 @@
+<div class="button-container">
+    <div class="refresh-btn" (click)="getTotalNumberOfUsers()">
+        <button>Refresh Data</button>
+    </div>
+</div>
+<div class="dashboard-wrapper" >
+    <div class="users container" *ngIf="chartReady">
+        <div class="dashboard">
+            <canvas baseChart height="200 !important" width="400 !important" [datasets]="lineChartData"
+                [labels]="lineChartLabels" [legend]="lineChartLegend" [chartType]="lineChartType"
+                [plugins]="lineChartPlugins">
+            </canvas>
+        </div>
+
+
+    </div>
+
+    <div class="booking container" *ngIf="bookingChartReady">
+        <div class="dashboard">
+            <canvas baseChart height="200 !important" [colors]="lineChartColors" width="400 !important" [datasets]="bookingLineChartData"
+                [labels]="bookingLineChartLabels" [legend]="lineChartLegend" [chartType]="lineChartType"
+                [plugins]="lineChartPlugins">
+            </canvas>
+        </div>
+    </div>
+</div>
